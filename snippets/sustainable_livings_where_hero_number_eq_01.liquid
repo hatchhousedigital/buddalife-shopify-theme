@@ -1,0 +1,35 @@
+{% capture listItems %}
+{%- assign allItems = blogs['sustainable-living'].articles -%}
+{%- for item in allItems -%}{% assign condition_0 = false %}
+                        {% if item.metafields.udesly['hero-number'] == "01" %}
+                            {% assign condition_0 = true %}
+                        {% endif %}{% if condition_0 %}
+ <div role="listitem" class="home-slider-collection-item w-dyn-item">
+                      <div class="left-side">
+                        <h1 class="slider-h1-2">{{ item.title }}</h1>
+                        <p style="-webkit-transform:translate3d(0, 65PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 65PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 65PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 65PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="slider-subtext">{{ item.metafields.udesly['sub-text'] }}</p>
+                        <div class="_30px-div"></div>
+                        <a href="{{ item.url }}" class="text-link-2">Read article&nbsp;&nbsp;&gt;</a>
+                        <h1 style="-webkit-transform:translate3d(-239PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-239PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-239PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-239PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="hero-slider-number">{{ item.metafields.udesly['hero-number'] }}</h1>
+                      </div>
+                      <div class="right-side">
+                        <div class="hero-image-wrap">
+                          <div class="hero-image-overflow">
+                            <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0) ;background-image: url('{{item.image | img_url: 'master'}}')" class="slide-hero-image"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+{% endif %}
+{%- endfor -%}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="home-slider-collection-list-wrapper w-dyn-list" udy-collection="sustainable-living">
+                  {%- unless items_length == 0 -%}<div role="list" class="home-slider-collection-list w-dyn-items">
+                    {{ listItems }}
+                  </div>{%- endunless -%}
+                  {%- if items_length == 0 -%}<div class="w-dyn-empty">
+                    <div>No items found.</div>
+                  </div>{%- endif -%}
+                </div>

@@ -4,7 +4,7 @@
     <div class="container side-by-side">
       <div class="_45-percent-width-wrap">
         <div class="image-wrap">
-          <div class="image about-hero"></div>
+          {%- if page.metafields.global.featured_image == nil -%}<div class="image about-hero"></div>{%- else -%}<div class="image about-hero" style="background-image: url('{{ page.metafields.global.featured_image | img_url: 'master' }}');"></div>{%- endif -%}
         </div>
       </div>
       <div class="about-us">

@@ -58,14 +58,14 @@
       },
       {
         "type": "color",
-        "id": "color_-665b9284",
-        "label": "Color -665b9284",
+        "id": "color_n665b9284",
+        "label": "Color n665b9284",
         "default": "rgba(0, 0, 0, 0.8)"
       },
       {
         "type": "color",
-        "id": "color_-65194d1d",
-        "label": "Color -65194d1d",
+        "id": "color_n65194d1d",
+        "label": "Color n65194d1d",
         "default": "rgba(0, 0, 0, 0.25)"
       },
       {
@@ -76,8 +76,8 @@
       },
       {
         "type": "color",
-        "id": "color_-d2a2d19",
-        "label": "Color -d2a2d19",
+        "id": "color_nd2a2d19",
+        "label": "Color nd2a2d19",
         "default": "#fafafa"
       },
       {
@@ -100,14 +100,14 @@
       },
       {
         "type": "color",
-        "id": "color_-4bc568a",
-        "label": "Color -4bc568a",
+        "id": "color_n4bc568a",
+        "label": "Color n4bc568a",
         "default": "#ffdede"
       },
       {
         "type": "color",
-        "id": "color_-58536e15",
-        "label": "Color -58536e15",
+        "id": "color_n58536e15",
+        "label": "Color n58536e15",
         "default": "#f5f5f5"
       },
       {
@@ -118,20 +118,20 @@
       },
       {
         "type": "color",
-        "id": "color_-47e9cc03",
-        "label": "Color -47e9cc03",
+        "id": "color_n47e9cc03",
+        "label": "Color n47e9cc03",
         "default": "#19494b"
       },
       {
         "type": "color",
-        "id": "color_-364a080",
-        "label": "Color -364a080",
+        "id": "color_n364a080",
+        "label": "Color n364a080",
         "default": "#1a927f"
       },
       {
         "type": "color",
-        "id": "color_-1675ec70",
-        "label": "Color -1675ec70",
+        "id": "color_n1675ec70",
+        "label": "Color n1675ec70",
         "default": "#272d2c"
       },
       {
@@ -142,14 +142,14 @@
       },
       {
         "type": "color",
-        "id": "color_-d2a31f1",
-        "label": "Color -d2a31f1",
+        "id": "color_nd2a31f1",
+        "label": "Color nd2a31f1",
         "default": "#fafaf9"
       },
       {
         "type": "color",
-        "id": "color_-10cdde80",
-        "label": "Color -10cdde80",
+        "id": "color_n10cdde80",
+        "label": "Color n10cdde80",
         "default": "rgba(202, 218, 194, 0.3)"
       },
       {
@@ -160,20 +160,14 @@
       },
       {
         "type": "color",
-        "id": "color_-651a321a",
-        "label": "Color -651a321a",
-        "default": "rgba(0, 0, 0, 0.06)"
-      },
-      {
-        "type": "color",
-        "id": "color_-6519ccbf",
-        "label": "Color -6519ccbf",
+        "id": "color_n6519ccbf",
+        "label": "Color n6519ccbf",
         "default": "rgba(0, 0, 0, 0.12)"
       },
       {
         "type": "color",
-        "id": "color_-894308",
-        "label": "Color -894308",
+        "id": "color_n894308",
+        "label": "Color n894308",
         "default": "rgba(25, 73, 75, 0.1)"
       },
       {
@@ -190,21 +184,9 @@
       },
       {
         "type": "color",
-        "id": "color_-651a399c",
-        "label": "Color -651a399c",
+        "id": "color_n651a399c",
+        "label": "Color n651a399c",
         "default": "rgba(0, 0, 0, 0.04)"
-      },
-      {
-        "type": "color",
-        "id": "color_-d7172c7",
-        "label": "Color -d7172c7",
-        "default": "#faaa04"
-      },
-      {
-        "type": "color",
-        "id": "color_-6519c53d",
-        "label": "Color -6519c53d",
-        "default": "rgba(0, 0, 0, 0.14)"
       },
       {
         "type": "color",
@@ -214,20 +196,20 @@
       },
       {
         "type": "color",
-        "id": "color_-10cde241",
-        "label": "Color -10cde241",
+        "id": "color_n10cde241",
+        "label": "Color n10cde241",
         "default": "rgba(202, 218, 194, 0.2)"
       },
       {
         "type": "color",
-        "id": "color_-10cf3ad4",
-        "label": "Color -10cf3ad4",
+        "id": "color_n10cf3ad4",
+        "label": "Color n10cf3ad4",
         "default": "rgba(250, 250, 249, 0.16)"
       },
       {
         "type": "color",
-        "id": "color_-4318555a",
-        "label": "Color -4318555a",
+        "id": "color_n4318555a",
+        "label": "Color n4318555a",
         "default": "rgba(39, 45, 44, 0.43)"
       },
       {
@@ -244,111 +226,125 @@
       },
       {
         "type": "color",
-        "id": "color_-18336990",
-        "label": "Color -18336990",
-        "default": "#263238"
-      },
-      {
-        "type": "color",
-        "id": "color_-564138ac",
-        "label": "Color -564138ac",
+        "id": "color_n564138ac",
+        "label": "Color n564138ac",
         "default": "rgba(193, 191, 189, 0.4)"
       },
       {
         "type": "color",
-        "id": "color_-1f0b59b2",
-        "label": "Color -1f0b59b2",
+        "id": "color_n1f0b59b2",
+        "label": "Color n1f0b59b2",
         "default": "#221f1f"
       },
       {
         "type": "color",
-        "id": "color_-109d95c2",
-        "label": "Color -109d95c2",
+        "id": "color_n109d95c2",
+        "label": "Color n109d95c2",
         "default": "rgba(25, 73, 75, 0.45)"
       },
       {
         "type": "color",
-        "id": "color_-68c5d499",
-        "label": "Color -68c5d499",
-        "default": "rgba(220, 232, 236, 0.36)"
-      },
-      {
-        "type": "color",
-        "id": "color_-6519b639",
-        "label": "Color -6519b639",
-        "default": "rgba(0, 0, 0, 0.18)"
-      },
-      {
-        "type": "color",
-        "id": "color_-1d600f69",
-        "label": "Color -1d600f69",
+        "id": "color_n1d600f69",
+        "label": "Color n1d600f69",
         "default": "#232222"
       },
       {
         "type": "color",
-        "id": "color_-54e8d3db",
-        "label": "Color -54e8d3db",
+        "id": "color_n54e8d3db",
+        "label": "Color n54e8d3db",
         "default": "#f7f7f7"
       },
       {
         "type": "color",
-        "id": "color_-651a2e59",
-        "label": "Color -651a2e59",
+        "id": "color_n651a2e59",
+        "label": "Color n651a2e59",
         "default": "rgba(0, 0, 0, 0.07)"
       },
       {
         "type": "color",
-        "id": "color_-c39e8fb",
-        "label": "Color -c39e8fb",
+        "id": "color_nc39e8fb",
+        "label": "Color nc39e8fb",
         "default": "#fc9d9d"
       },
       {
         "type": "color",
-        "id": "color_-2e14d35f",
-        "label": "Color -2e14d35f",
+        "id": "color_n18336990",
+        "label": "Color n18336990",
+        "default": "#263238"
+      },
+      {
+        "type": "color",
+        "id": "color_n651a321a",
+        "label": "Color n651a321a",
+        "default": "rgba(0, 0, 0, 0.06)"
+      },
+      {
+        "type": "color",
+        "id": "color_n2e14d35f",
+        "label": "Color n2e14d35f",
         "default": "#5b95f4"
       },
       {
         "type": "color",
-        "id": "color_-651a2a98",
-        "label": "Color -651a2a98",
+        "id": "color_n651a2a98",
+        "label": "Color n651a2a98",
         "default": "rgba(0, 0, 0, 0.08)"
       },
       {
         "type": "color",
-        "id": "color_-109b53a8",
-        "label": "Color -109b53a8",
+        "id": "color_n109b53a8",
+        "label": "Color n109b53a8",
         "default": "rgba(25, 73, 75, 0.94)"
       },
       {
         "type": "color",
-        "id": "color_-6518d8be",
-        "label": "Color -6518d8be",
+        "id": "color_n6518d8be",
+        "label": "Color n6518d8be",
         "default": "rgba(0, 0, 0, 0.35)"
       },
       {
         "type": "color",
-        "id": "color_-892500",
-        "label": "Color -892500",
+        "id": "color_n892500",
+        "label": "Color n892500",
         "default": "rgba(25, 73, 75, 0.9)"
       },
       {
         "type": "color",
-        "id": "color_-8eeab64",
-        "label": "Color -8eeab64",
-        "default": "rgba(202, 218, 194, 0.16)"
+        "id": "color_n68c5d499",
+        "label": "Color n68c5d499",
+        "default": "rgba(220, 232, 236, 0.36)"
       },
       {
         "type": "color",
-        "id": "color_6afec075",
-        "label": "Color 6afec075",
-        "default": "rgba(226, 165, 123, 0.9)"
+        "id": "color_n6519b639",
+        "label": "Color n6519b639",
+        "default": "rgba(0, 0, 0, 0.18)"
+      },
+      {
+        "type": "color",
+        "id": "color_n8eeab64",
+        "label": "Color n8eeab64",
+        "default": "rgba(202, 218, 194, 0.16)"
       }
     ]
   },
   {
     "name": "Products Collection Settings",
     "settings": [
+      {
+        "type": "collection",
+        "id": "featured_products",
+        "label": "featured products"
+      },
+      {
+        "type": "range",
+        "id": "featured_products_limit",
+        "label": "featured products limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
       {
         "type": "collection",
         "id": "collection_anxiety",

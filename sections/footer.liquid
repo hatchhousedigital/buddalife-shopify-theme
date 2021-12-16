@@ -3,7 +3,7 @@
         <div class="w-layout-grid footer-grid">
           <div class="footer-info">
             <div class="footer-logo-wrapper">
-              <a href="#" class="footer-home-link w-inline-block"><img src="{{ 'buddalife-logo-white.png' | asset_url }}" loading="lazy" width="228" sizes="(max-width: 479px) 95vw, 300px" srcset="{{ 'buddalife-logo-white-p-500.png' | asset_url }} 500w, {{ 'buddalife-logo-white-p-800.png' | asset_url }} 800w, {{ 'buddalife-logo-white-p-1080.png' | asset_url }} 1080w, {{ 'buddalife-logo-white-p-1600.png' | asset_url }} 1600w, {{ 'buddalife-logo-white-p-2000.png' | asset_url }} 2000w, {{ 'buddalife-logo-white-p-2600.png' | asset_url }} 2600w, {{ 'buddalife-logo-white.png' | asset_url }} 2954w" alt="" class="footer-logo"></a>
+              <a href="#" class="footer-home-link w-inline-block"><img src="{{ 'buddalife-logo-white.png' | asset_url }}" loading="lazy" width="228" sizes="(max-width: 479px) 100vw, 300px" srcset="{{ 'buddalife-logo-white-p-500.png' | asset_url }} 500w, {{ 'buddalife-logo-white-p-800.png' | asset_url }} 800w, {{ 'buddalife-logo-white-p-1080.png' | asset_url }} 1080w, {{ 'buddalife-logo-white-p-1600.png' | asset_url }} 1600w, {{ 'buddalife-logo-white-p-2000.png' | asset_url }} 2000w, {{ 'buddalife-logo-white-p-2600.png' | asset_url }} 2600w, {{ 'buddalife-logo-white.png' | asset_url }} 2954w" alt="" class="footer-logo"></a>
             </div>
             <p class="white-text footer-text">{{ section.settings.claim }}</p>
           </div>
@@ -28,7 +28,7 @@
             <h2 id="w-node-d588aed0-b6cb-c456-28e7-2253478e4787-478e4764" class="newsletter-cta">{{ section.settings.newsletter }}</h2>
             <div class="form-block w-form">
               {%- form "customer",  class: "" -%}<input type="hidden" name="contact[tags]" value="newsletter">
-                <div class="flex"><input type="text" class="text-field first w-input" maxlength="256" name="contact[first_name_]" data-name="First Name 2" placeholder="First Name*" id="First-Name-2" required=""><input type="text" class="text-field w-input" maxlength="256" name="contact[last_name_]" data-name="Last Name 3" placeholder="Last Name*" id="Last-Name-3" required=""></div><input type="email" class="text-field w-input" maxlength="256" name="contact[email]" data-name="Email 5" placeholder="Email Address*" id="Email-5" required=""><input type="submit" value="I WANT IN" data-wait="Please wait..." class="submit-button w-button">
+                <div class="flex"><input type="text" class="text-field first w-input" maxlength="256" name="contact[first_name]" data-name="first_name" placeholder="First Name*" id="first_name-4" required=""><input type="text" class="text-field w-input" maxlength="256" name="contact[last_name]" data-name="last_name" placeholder="Last Name*" id="last_name-5" required=""></div><input type="email" class="text-field w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="Email Address*" id="Email-6" required=""><input type="submit" value="I WANT IN" data-wait="Please wait..." class="submit-button w-button">
               {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
               <div class="w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
                 <div>{{ 't5a0ea5a1' | t }}</div>

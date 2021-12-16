@@ -9,7 +9,7 @@
       </div>
       <div class="about-us">
         <h1 class="heading">{{ 'tn8112194' | t }}</h1>
-        <p class="paragraph">{{ blog.metafields.sustainable-living.description.value }}</p>
+        <p class="paragraph">{{ blog.metafields.sustainable-living.description }}</p>
         <a href="#" class="button w-button">{{ 't2db00960' | t }}</a>
       </div>
     </div>
@@ -34,7 +34,7 @@
         <div class="flex verticle">
           <div class="catergories-contain category-page">
             <h2 class="content-category-heading">{{ 'tn17f65062' | t }}</h2>
-            {%- render "sustainable_living_archive" -%}
+            {%- render "sustainable_livings_archive" -%}
           </div>
           <div class="catergories-contain category-page">
             <h2 class="content-category-heading">{{ 'tn249a6c1' | t }}</h2>

@@ -56,6 +56,7 @@
         </div>
       </div>
       <div class="nav-menu">
+        <form action="/search" class="search-3 w-form" method="get" role="search"><label for="search" class="field-label-3">{{ 'tn6ca0ae38' | t }}</label><input type="search" class="search-input-2 w-input" maxlength="256" name="q" placeholder="Search…" id="search-2" required=""><input type="submit" value="Search" class="button search w-button"></form>
         <div class="menu-section-wrap top">
           <h4 class="menu-section-title">{{ 'tn10d26d54' | t }}</h4>
           {%- for link in linklists["shop-now"].links -%}<a href="{{ link.url }}" class="nav-menu-link">{{ link.title }}</a>{%- endfor -%}{%- render 'menu-error', menu: "shop-now" -%}

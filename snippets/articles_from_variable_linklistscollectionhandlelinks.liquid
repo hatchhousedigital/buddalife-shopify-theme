@@ -1,0 +1,27 @@
+{% capture listItems %}
+    {%- assign allItems = linklists[collection.handle].links -%}
+        {%- for link in allItems -%}
+              {%- assign item = link.object -%}
+            <div role="listitem" class="resources-block w-dyn-item">
+                <div class="resources-image" style="background-image: url('{{item.image | img_url: 'master'}}')">
+                  <a href="{{ item.url }}" class="learn-more-link-2 w-inline-block">
+                    <div class="learn-more">Learn more</div><img src="{{ 'arrow-forward-2-copy-223x_1arrow-forward-2-copy-223x.png' | asset_url }}" width="15" alt="" class="learn-more-arrow">
+                  </a>
+                </div>
+                <div class="resources-bottom">
+                  <div class="more-resources-title-2">{{ item.title }}</div>
+                  <div class="resources-text">{{ item.metafields.udesly['article-date'] | date: "%B %e, %Y" }}</div>
+                </div>
+              </div>
+        {%- endfor -%}
+    {% endcapture %}
+{% assign items_length = listItems | strip | size %}
+             
+      <div class="w-dyn-list" udy-collection="sustainable-living">
+            {%- unless items_length == 0 -%}<div role="list" class="w-dyn-items">
+              {{ listItems }}
+            </div>{%- endunless -%}
+            {%- if items_length == 0 -%}<div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>{%- endif -%}
+          </div>
