@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="about-us">
-        <h1 class="heading">{{ 'tn74391ea7' | t }}</h1>
+        <h1 class="heading">{{ blog.title }}</h1>
         <p class="paragraph">{{ blog.metafields.global.description }}</p>
         <a href="#" class="button w-button">{{ 't2db00960' | t }}</a>
       </div>
@@ -33,14 +33,18 @@
         </div>
         <div class="flex verticle">
           <div class="catergories-contain category-page">
-            <h2 class="content-category-heading">{{ 't7be1b28b' | t }}</h2>
+            <h2 class="content-category-heading">{{ blog.title }}</h2>
             {%- render "body_aches_and_pains_archive" -%}
             <div class="articles-wrapper"></div>
           </div>
           <div class="catergories-contain category-page">
-            <h2 class="content-category-heading">{{ 'tn6e71a3d4' | t }}</h2>
+            <h2 class="content-category-heading">Products for {{ blog.title }}</h2>
             <div class="products content-category-page">
-              {%- if settings.collection_body_aches_and_pains != blank -%}{%- render "markup_for_collection_body_aches_and_pains" -%}{%- else -%}{%- render "products_max_6_number_1" -%}{%- endif -%}
+              {%- if blog.metafields.global.collection_handle != nil -%}
+              {%- render "markup_for_custom_blog", chosen_collection_handle: blog.metafields.global.collection_handle -%}
+              {%- else -%}
+              {%- render "products_max_6_number_1" -%}
+              {%- endif -%}
             </div>
           </div>
         </div>
