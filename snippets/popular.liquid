@@ -1,0 +1,25 @@
+<div class="section wf-section">
+      <div class="container">
+        <div class="title-wrap align-with-content">
+          <h2 class="title">{{ 'tn77089085' | t }}<span class="e2a57b">{{ 'tn4564c9a3' | t }}</span><span class="e2a57b"></span></h2>
+          <div class="w-layout-grid main-cards-box">
+            {%- for link in linklists["trending-articles"].links -%}{%- assign object = link.object -%}<div class="card-container">
+              <a href="{{ object.url }}" class="article-card-main-link w-inline-block">
+                <div class="article-info">
+                  <h5>{{ object.published_at | date: "%B %e, %Y" }}</h5>
+                  <h3>{{ object.title }}</h3>
+                  <p class="paragraph-7">{{ object.excerpt }}</p>
+                  {% assign blog_handle = object.url |replace: "/blogs/", "" | split: "/" | first %}<div class="category-tag-2">
+                    <h6>{{ blogs[blog_handle].title }}</h6>
+                  </div>
+                </div>
+                <div class="article-card-image" style="background-image: url('{{ object.image | img_url: 'large' }}');"></div>
+                <div class="article-card-read-more-link-2" href="{{ object.url }}">
+                  <h5 class="read-more-2">{{ 't31997f7f' | t }}</h5>
+                </div>
+              </a>
+            </div>{%- endfor -%}{%- render 'menu-error', menu: "trending-articles" -%}
+          </div>
+        </div>
+      </div>
+    </div>

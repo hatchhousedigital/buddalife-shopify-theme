@@ -1,0 +1,59 @@
+
+      <div class="container side-by-side">
+        <div class="_45-percent-width-wrap">
+          <div class="image-wrap">
+            {%- if section.settings.image == nil -%}<div class="image join"></div>{%- else -%}<div class="image join" style="background-image: url('{{ section.settings.image.src | img_url: 'master' }}');"></div>{%- endif -%}
+          </div>
+        </div>
+        <div class="join-the-community">
+          <div class="title-wrap">
+            <h2 class="title">{{ section.settings.title }}</h2>
+            <div class="general-subscibe-paragraph">{{ section.settings.text }}</div>
+          </div>
+          <div class="form-block w-form">
+            {%- form "customer",  class: "" -%}<input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="flex">
+                <input type="text" class="text-field first w-input" maxlength="256" name="contact[first_name_]" data-name="First Name 2" placeholder="First Name*" id="First-Name-2" required="">
+                <input type="text" class="text-field w-input" maxlength="256" name="contact[last_name_]" data-name="Last Name 3" placeholder="Last Name" id="Last-Name-3"></div>
+            <input type="email" class="text-field w-input" maxlength="256" name="contact[email]" data-name="Email 5" placeholder="Email Address*" id="Email-5" required=""><input type="submit" value="I WANT IN" data-wait="Please wait..." class="submit-button w-button">
+            {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
+            <div class="w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
+              <div>{{ 't5a0ea5a1' | t }}</div>
+            </div>
+            {%- unless form_success -%}<div class="w-form-fail  {% if form.errors %}form-has-errors{% endif %}">
+              <div>{%- render "form-errors", form_errors: form_errors -%}</div>
+            </div>{%- endunless -%}
+          </div>
+        </div>
+      </div>
+      <div class="absolute-side-background large-left"></div>
+    
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');{% unless request.design_mode %}currentSection.id = "Join-Community";{% endunless %}currentSection.setAttribute("class","section wf-section");</script>
+        
+{% schema %}
+{
+  "name": "Join CTA",
+  "tag": "div",
+  "class": "section wf-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Join the Buddalife Community"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Buddalife is a health and wellness community for personal, animal and planet health."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}

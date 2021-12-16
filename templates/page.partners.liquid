@@ -1,0 +1,18 @@
+{%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "61702d2b859f544a372d0768" -%}{%- assign bodyClasses = "" -%}
+  {%- render 'navbar' -%}
+  <div class="section support-desk wf-section">
+    <div class="container support-content">
+      <h1 class="align-center max-600px heading">{{ 'tn5a843e5f' | t }}</h1>
+      {%- section 'partners' -%}
+    </div>
+    <div class="right-square">
+      <div class="large-square support"></div>
+    </div>
+    <div class="light-green-absolute-bg bottom-left"></div>
+  </div>
+  {%- section 'footer' -%}
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=61702d2b859f5470f02d0707" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+{{ 'udesly-shopify.min.js' | asset_url | script_tag }}

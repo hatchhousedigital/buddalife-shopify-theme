@@ -1,0 +1,50 @@
+
+        <div class="flex center">
+          <h2>{{ 'tn5b4dfedd' | t }}</h2>
+        </div>
+        <div class="faq-contain">
+          {%- for block in section.blocks -%}{%- if block.type == "faq" -%}<div class="faq-wrap" block.shopify_attributes>
+            <div data-w-id="d210d873-063f-1f64-03b2-c590a3215ede" class="faq-question">
+              <div class="faq-plus-wrap">
+                <div class="faq-plus-l"></div>
+                <div class="faq-plus"></div>
+              </div>
+              <h4 class="faq">{{ block.settings.title }}</h4>
+            </div>
+            <div class="faq-answer">
+              <p>{{ block.settings.answer }}</p>
+            </div>
+          </div>{%- endif -%}{%- endfor -%}
+        </div>
+      
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');{% unless request.design_mode %}currentSection.id = "Returns";{% endunless %}currentSection.setAttribute("class","faqs");</script>
+        
+{% schema %}
+{
+  "name": "Returns FAQs",
+  "tag": "div",
+  "class": "faqs",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Heconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaading"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+		  "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

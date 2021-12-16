@@ -1,0 +1,42 @@
+
+      {%- if section.settings.image == nil -%}<div data-w-id="d73633f7-4b45-afdc-b222-06f87ed38239" class="full-width-image"></div>{%- else -%}<div data-w-id="d73633f7-4b45-afdc-b222-06f87ed38239" class="full-width-image" style="background-image: url('{{ section.settings.image.src | img_url: 'master' }}');"></div>{%- endif -%}
+      <div class="shop-cta">
+        <h2 class="white-text align-center">{{ section.settings.title }}</h2>
+        <p class="white-text align-center">{{ section.settings.paragraph }}</p>
+        <a href="{{ section.settings.url }}" class="button on-dark w-button">{{ 'tn10d1f534' | t }}</a>
+      </div>
+    
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","section full-width-image-section wf-section");</script>
+        
+{% schema %}
+{
+  "name": "Shop CTA",
+  "tag": "div",
+  "class": "section full-width-image-section wf-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Just Landed!"
+    },
+    {
+      "type": "text",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "Independently lab-tested, Buddahealth CBD is the premium CBD oil. "
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "URL"
+    }
+  ]
+}
+{% endschema %}

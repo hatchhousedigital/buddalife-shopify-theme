@@ -1,0 +1,28 @@
+{% capture listItems %}  
+                        {% for item in blog.articles %}
+                        <div role="listitem" class="card-container w-dyn-item">
+                  <a href="{{ item.url }}" class="article-card-link w-inline-block">
+                    <h5>{{ item.metafields.udesly['article-date'] | date: "%B %e, %Y" }}</h5>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.metafields.udesly['sub-text'] }}</p>
+                    <div class="article-card-image" style="background-image: url('{{item.image | img_url: 'master'}}')"></div>
+                    <div class="article-card-read-more-link">
+                      <h6 class="read-more">Read MORE</h6>
+                    </div>
+                    <div class="category-tag">
+                      <div class="author-circle-img" style="background-image: url('{{ item.user.image | img_url: 'large' }}');"></div>
+                      <h6>{{ item.author }}</h6>
+                    </div>
+                  </a>
+                </div>
+                        {% endfor %}
+                        {% endcapture %}
+{% assign items_length = listItems | strip | size %}
+    <div class="w-dyn-list" udy-collection="sleep">
+              {%- unless items_length == 0 -%}<div role="list" class="main-cards-box w-dyn-items">
+                {{ listItems }}
+              </div>{%- endunless -%}
+              {%- if items_length == 0 -%}<div class="w-dyn-empty">
+                <div>No items found.</div>
+              </div>{%- endif -%}
+            </div>

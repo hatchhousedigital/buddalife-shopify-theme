@@ -1,0 +1,49 @@
+
+        {%- for block in section.blocks -%}{%- if block.type == "partner" -%}<div block.shopify_attributes>
+          <a href="{{ block.settings.url }}" class="faq-link-card w-inline-block">{%- if block.settings.image == nil -%}<img src="{{ 'eye.svg' | asset_url }}" width="73" alt="" class="faq-card-icon">{%- else -%}<img src="{{ block.settings.image.src | img_url: 'master' }}" width="73" alt="{{ block.settings.image.alt | escape }}" class="faq-card-icon" srcset="{{ block.settings.image | img_url: '1920x' }} 1920w,{{ block.settings.image | img_url: '1600x' }} 1600w,{{ block.settings.image | img_url: '1366x' }} 1366w,{{ block.settings.image | img_url: '1024x' }} 1024w,{{ block.settings.image | img_url: '768x' }} 768w,{{ block.settings.image | img_url: '640x' }} 640w">{%- endif -%}
+            <h4>{{ block.settings.partner_name }}</h4>
+            <p>{{ block.settings.partner_description }}</p>
+          </a>
+        </div>{%- endif -%}{%- endfor -%}
+      
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","support-link-cards-wrapper");</script>
+        
+{% schema %}
+{
+  "name": "Partners",
+  "tag": "div",
+  "class": "support-link-cards-wrapper",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Partner",
+      "type": "partner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "partner_name",
+          "label": "Partner Name",
+          "default": "Partner X"
+        },
+        {
+          "type": "textarea",
+          "id": "partner_description",
+          "label": "Partner Description",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

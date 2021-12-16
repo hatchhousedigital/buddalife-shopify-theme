@@ -1,0 +1,620 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "buddalife-shopify",
+    "theme_author": "Udesly User",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://www.domain.tld",
+    "theme_support_email": "support@email.com"
+  },
+  {
+    "name": "Seo Settings",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon Image",
+        "info": "Will be scaled down to 32x32px"
+      },
+      {
+        "type": "image_picker",
+        "id": "apple_touch_icon",
+        "label": "Apple touch icon image",
+        "info": "Will be scaled down to 120x120px"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_product_rich_snippets",
+        "label": "Enable Product Rich Snippets",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_article_rich_snippets",
+        "label": "Enable Article Rich Snippets",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Colors Settings",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_20748b16",
+        "label": "Color 20748b16",
+        "default": "#3898ec"
+      },
+      {
+        "type": "color",
+        "id": "color_21d1ff8",
+        "label": "Color 21d1ff8",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "color_-665b9284",
+        "label": "Color -665b9284",
+        "default": "rgba(0, 0, 0, 0.8)"
+      },
+      {
+        "type": "color",
+        "id": "color_-65194d1d",
+        "label": "Color -65194d1d",
+        "default": "rgba(0, 0, 0, 0.25)"
+      },
+      {
+        "type": "color",
+        "id": "color_746d8885",
+        "label": "Color 746d8885",
+        "default": "#e6e6e6"
+      },
+      {
+        "type": "color",
+        "id": "color_-d2a2d19",
+        "label": "Color -d2a2d19",
+        "default": "#fafafa"
+      },
+      {
+        "type": "color",
+        "id": "color_21c2f7a",
+        "label": "Color 21c2f7a",
+        "default": "#ddd"
+      },
+      {
+        "type": "color",
+        "id": "color_207fce5",
+        "label": "Color 207fce5",
+        "default": "#999"
+      },
+      {
+        "type": "color",
+        "id": "color_203c2ae",
+        "label": "Color 203c2ae",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "id": "color_-4bc568a",
+        "label": "Color -4bc568a",
+        "default": "#ffdede"
+      },
+      {
+        "type": "color",
+        "id": "color_-58536e15",
+        "label": "Color -58536e15",
+        "default": "#f5f5f5"
+      },
+      {
+        "type": "color",
+        "id": "color_2069428",
+        "label": "Color 2069428",
+        "default": "#666"
+      },
+      {
+        "type": "color",
+        "id": "color_-47e9cc03",
+        "label": "Color -47e9cc03",
+        "default": "#19494b"
+      },
+      {
+        "type": "color",
+        "id": "color_-364a080",
+        "label": "Color -364a080",
+        "default": "#1a927f"
+      },
+      {
+        "type": "color",
+        "id": "color_-1675ec70",
+        "label": "Color -1675ec70",
+        "default": "#272d2c"
+      },
+      {
+        "type": "color",
+        "id": "color_6d60ac4c",
+        "label": "Color 6d60ac4c",
+        "default": "#e2a57b"
+      },
+      {
+        "type": "color",
+        "id": "color_-d2a31f1",
+        "label": "Color -d2a31f1",
+        "default": "#fafaf9"
+      },
+      {
+        "type": "color",
+        "id": "color_-10cdde80",
+        "label": "Color -10cdde80",
+        "default": "rgba(202, 218, 194, 0.3)"
+      },
+      {
+        "type": "color",
+        "id": "color_4e08d73b",
+        "label": "Color 4e08d73b",
+        "default": "rgba(202, 218, 194, 0)"
+      },
+      {
+        "type": "color",
+        "id": "color_-651a321a",
+        "label": "Color -651a321a",
+        "default": "rgba(0, 0, 0, 0.06)"
+      },
+      {
+        "type": "color",
+        "id": "color_-6519ccbf",
+        "label": "Color -6519ccbf",
+        "default": "rgba(0, 0, 0, 0.12)"
+      },
+      {
+        "type": "color",
+        "id": "color_-894308",
+        "label": "Color -894308",
+        "default": "rgba(25, 73, 75, 0.1)"
+      },
+      {
+        "type": "color",
+        "id": "color_1026a08a",
+        "label": "Color 1026a08a",
+        "default": "#6feeca"
+      },
+      {
+        "type": "color",
+        "id": "color_5406e12e",
+        "label": "Color 5406e12e",
+        "default": "#cadac2"
+      },
+      {
+        "type": "color",
+        "id": "color_-651a399c",
+        "label": "Color -651a399c",
+        "default": "rgba(0, 0, 0, 0.04)"
+      },
+      {
+        "type": "color",
+        "id": "color_-d7172c7",
+        "label": "Color -d7172c7",
+        "default": "#faaa04"
+      },
+      {
+        "type": "color",
+        "id": "color_-6519c53d",
+        "label": "Color -6519c53d",
+        "default": "rgba(0, 0, 0, 0.14)"
+      },
+      {
+        "type": "color",
+        "id": "color_6a2db9d7",
+        "label": "Color 6a2db9d7",
+        "default": "#e0e0e0"
+      },
+      {
+        "type": "color",
+        "id": "color_-10cde241",
+        "label": "Color -10cde241",
+        "default": "rgba(202, 218, 194, 0.2)"
+      },
+      {
+        "type": "color",
+        "id": "color_-10cf3ad4",
+        "label": "Color -10cf3ad4",
+        "default": "rgba(250, 250, 249, 0.16)"
+      },
+      {
+        "type": "color",
+        "id": "color_-4318555a",
+        "label": "Color -4318555a",
+        "default": "rgba(39, 45, 44, 0.43)"
+      },
+      {
+        "type": "color",
+        "id": "color_699711f4",
+        "label": "Color 699711f4",
+        "default": "rgba(254, 231, 221, 0.2)"
+      },
+      {
+        "type": "color",
+        "id": "color_2052b6b",
+        "label": "Color 2052b6b",
+        "default": "#333"
+      },
+      {
+        "type": "color",
+        "id": "color_-18336990",
+        "label": "Color -18336990",
+        "default": "#263238"
+      },
+      {
+        "type": "color",
+        "id": "color_-564138ac",
+        "label": "Color -564138ac",
+        "default": "rgba(193, 191, 189, 0.4)"
+      },
+      {
+        "type": "color",
+        "id": "color_-1f0b59b2",
+        "label": "Color -1f0b59b2",
+        "default": "#221f1f"
+      },
+      {
+        "type": "color",
+        "id": "color_-109d95c2",
+        "label": "Color -109d95c2",
+        "default": "rgba(25, 73, 75, 0.45)"
+      },
+      {
+        "type": "color",
+        "id": "color_-68c5d499",
+        "label": "Color -68c5d499",
+        "default": "rgba(220, 232, 236, 0.36)"
+      },
+      {
+        "type": "color",
+        "id": "color_-6519b639",
+        "label": "Color -6519b639",
+        "default": "rgba(0, 0, 0, 0.18)"
+      },
+      {
+        "type": "color",
+        "id": "color_-1d600f69",
+        "label": "Color -1d600f69",
+        "default": "#232222"
+      },
+      {
+        "type": "color",
+        "id": "color_-54e8d3db",
+        "label": "Color -54e8d3db",
+        "default": "#f7f7f7"
+      },
+      {
+        "type": "color",
+        "id": "color_-651a2e59",
+        "label": "Color -651a2e59",
+        "default": "rgba(0, 0, 0, 0.07)"
+      },
+      {
+        "type": "color",
+        "id": "color_-c39e8fb",
+        "label": "Color -c39e8fb",
+        "default": "#fc9d9d"
+      },
+      {
+        "type": "color",
+        "id": "color_-2e14d35f",
+        "label": "Color -2e14d35f",
+        "default": "#5b95f4"
+      },
+      {
+        "type": "color",
+        "id": "color_-651a2a98",
+        "label": "Color -651a2a98",
+        "default": "rgba(0, 0, 0, 0.08)"
+      },
+      {
+        "type": "color",
+        "id": "color_-109b53a8",
+        "label": "Color -109b53a8",
+        "default": "rgba(25, 73, 75, 0.94)"
+      },
+      {
+        "type": "color",
+        "id": "color_-6518d8be",
+        "label": "Color -6518d8be",
+        "default": "rgba(0, 0, 0, 0.35)"
+      },
+      {
+        "type": "color",
+        "id": "color_-892500",
+        "label": "Color -892500",
+        "default": "rgba(25, 73, 75, 0.9)"
+      },
+      {
+        "type": "color",
+        "id": "color_-8eeab64",
+        "label": "Color -8eeab64",
+        "default": "rgba(202, 218, 194, 0.16)"
+      },
+      {
+        "type": "color",
+        "id": "color_6afec075",
+        "label": "Color 6afec075",
+        "default": "rgba(226, 165, 123, 0.9)"
+      }
+    ]
+  },
+  {
+    "name": "Products Collection Settings",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection_anxiety",
+        "label": "Collection Anxiety"
+      },
+      {
+        "type": "range",
+        "id": "collection_anxiety_limit",
+        "label": "Collection Anxiety limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_blood_circulation",
+        "label": "Collection Blood Circulation"
+      },
+      {
+        "type": "range",
+        "id": "collection_blood_circulation_limit",
+        "label": "Collection Blood Circulation limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_body_aches_and_pains",
+        "label": "Collection Body Aches & Pains"
+      },
+      {
+        "type": "range",
+        "id": "collection_body_aches_and_pains_limit",
+        "label": "Collection Body Aches & Pains limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_categories_template",
+        "label": "Collection Categories Template"
+      },
+      {
+        "type": "range",
+        "id": "collection_categories_template_limit",
+        "label": "Collection Categories Template limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_products_template",
+        "label": "Collection Products Template"
+      },
+      {
+        "type": "range",
+        "id": "collection_products_template_limit",
+        "label": "Collection Products Template limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_electro_magnetic_fields",
+        "label": "Collection Electro Magnetic Fields"
+      },
+      {
+        "type": "range",
+        "id": "collection_electro_magnetic_fields_limit",
+        "label": "Collection Electro Magnetic Fields limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_gut_health",
+        "label": "Collection Gut Health"
+      },
+      {
+        "type": "range",
+        "id": "collection_gut_health_limit",
+        "label": "Collection Gut Health limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_happiness",
+        "label": "Collection Happiness"
+      },
+      {
+        "type": "range",
+        "id": "collection_happiness_limit",
+        "label": "Collection Happiness limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_heart_health",
+        "label": "Collection Heart Health"
+      },
+      {
+        "type": "range",
+        "id": "collection_heart_health_limit",
+        "label": "Collection Heart Health limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_immune_system_health",
+        "label": "Collection Immune System Health"
+      },
+      {
+        "type": "range",
+        "id": "collection_immune_system_health_limit",
+        "label": "Collection Immune System Health limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_inflammation",
+        "label": "Collection Inflammation"
+      },
+      {
+        "type": "range",
+        "id": "collection_inflammation_limit",
+        "label": "Collection Inflammation limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_meditation",
+        "label": "Collection Meditation"
+      },
+      {
+        "type": "range",
+        "id": "collection_meditation_limit",
+        "label": "Collection Meditation limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_motherhood",
+        "label": "Collection Motherhood"
+      },
+      {
+        "type": "range",
+        "id": "collection_motherhood_limit",
+        "label": "Collection Motherhood limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_pets",
+        "label": "Collection Pets"
+      },
+      {
+        "type": "range",
+        "id": "collection_pets_limit",
+        "label": "Collection Pets limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_pregnancy",
+        "label": "Collection Pregnancy"
+      },
+      {
+        "type": "range",
+        "id": "collection_pregnancy_limit",
+        "label": "Collection Pregnancy limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_sleep",
+        "label": "Collection Sleep"
+      },
+      {
+        "type": "range",
+        "id": "collection_sleep_limit",
+        "label": "Collection Sleep limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_special_needs",
+        "label": "Collection Special Needs"
+      },
+      {
+        "type": "range",
+        "id": "collection_special_needs_limit",
+        "label": "Collection Special Needs limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_sustainable_living",
+        "label": "Collection Sustainable Living"
+      },
+      {
+        "type": "range",
+        "id": "collection_sustainable_living_limit",
+        "label": "Collection Sustainable Living limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "collection",
+        "id": "collection_yoga",
+        "label": "Collection Yoga"
+      },
+      {
+        "type": "range",
+        "id": "collection_yoga_limit",
+        "label": "Collection Yoga limit",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "default": 3
+      }
+    ]
+  }
+]

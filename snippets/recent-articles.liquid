@@ -1,0 +1,29 @@
+<div class="section wf-section">
+      <div class="container">
+        <div class="title-wrap align-with-content">
+          <p class="paragraph">{{ 't6e767c56' | t }}</p>
+          <h2 class="title">{{ 'tn1368fc18' | t }}<span class="e2a57b"></span><span class="e2a57b"></span></h2>
+        </div>
+        <div class="w-layout-grid main-cards-box">
+          {%- for link in linklists["latest-articles"].links -%}{%- assign object = link.object -%}<div class="card-container">
+            <a data-w-id="ed719277-d97a-a4bb-89b3-faf62d4f2ed5" href="{{ object.url }}" class="article-card-main-link w-inline-block">
+              <div class="article-info">
+                <h5>{{ object.published_at | date: "%B %e, %Y" }}</h5>
+                <h3>{{ object.title }}</h3>
+                <p class="paragraph-7">{{ object.excerpt }}</p>
+                {% assign blog_handle = object.url |replace: "/blogs/", "" | split: "/" | first %}<div class="category-tag-2">
+                  <h6>{{ blogs[blog_handle].title }}</h6>
+                </div>
+              </div>
+              <div class="article-card-image" style="background-image: url('{{ object.image | img_url: 'large' }}');"></div>
+              <div class="article-card-read-more-link-2" href="{{ object.url }}">
+                <h5 class="read-more-2">{{ 't31997f7f' | t }}</h5>
+              </div>
+            </a>
+          </div>{%- endfor -%}{%- render 'menu-error', menu: "latest-articles" -%}
+        </div>
+        <div class="cta-wrap">
+          <a href="/blogs/anxiety" class="button w-button">{{ 'tn53761ed4' | t }}</a>
+        </div>
+      </div>
+    </div>

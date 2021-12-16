@@ -1,0 +1,50 @@
+
+        <div class="flex center">
+          <h2>{{ 'tn1baefe39' | t }}</h2>
+        </div>
+        <div class="faq-contain">
+          {%- for block in section.blocks -%}{%- if block.type == "faq" -%}<div class="faq-wrap" block.shopify_attributes>
+            <div data-w-id="5f6ecb73-456f-6c4d-5188-c48ef31908f6" class="faq-question">
+              <div class="faq-plus-wrap">
+                <div class="faq-plus-l"></div>
+                <div class="faq-plus"></div>
+              </div>
+              <h4 class="faq">{{ block.settings.title }}</h4>
+            </div>
+            <div class="faq-answer">
+              <p>{{ block.settings.answer }}</p>
+            </div>
+          </div>{%- endif -%}{%- endfor -%}
+        </div>
+      
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');{% unless request.design_mode %}currentSection.id = "Sustainability";{% endunless %}currentSection.setAttribute("class","faqs");</script>
+        
+{% schema %}
+{
+  "name": "Sustainability FAQs",
+  "tag": "div",
+  "class": "faqs",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Heconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaading"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+		  "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

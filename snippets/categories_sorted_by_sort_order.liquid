@@ -1,0 +1,18 @@
+{% capture listItems %}
+{%- assign allItems = collections -%}
+{%- for item in allItems -%}
+                <div role="listitem" class="shop-by-category-collection-item w-dyn-item">
+                <a href="{{ item.url }}" class="button categories w-button">{{ item.title }}</a>
+              </div>
+{%- endfor -%}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="shop-by-collection-list-wrapper w-dyn-list" udy-collection="collection">
+            {%- unless items_length == 0 -%}<div role="list" class="shop-by-collection-list w-dyn-items">
+              {{ listItems }}
+            </div>{%- endunless -%}
+            {%- if items_length == 0 -%}<div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>{%- endif -%}
+          </div>

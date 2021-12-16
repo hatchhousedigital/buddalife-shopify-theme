@@ -1,0 +1,80 @@
+
+      <div class="container footer">
+        <div class="w-layout-grid footer-grid">
+          <div class="footer-info">
+            <div class="footer-logo-wrapper">
+              <a href="#" class="footer-home-link w-inline-block"><img src="{{ 'buddalife-logo-white.png' | asset_url }}" loading="lazy" width="228" sizes="(max-width: 479px) 95vw, 300px" srcset="{{ 'buddalife-logo-white-p-500.png' | asset_url }} 500w, {{ 'buddalife-logo-white-p-800.png' | asset_url }} 800w, {{ 'buddalife-logo-white-p-1080.png' | asset_url }} 1080w, {{ 'buddalife-logo-white-p-1600.png' | asset_url }} 1600w, {{ 'buddalife-logo-white-p-2000.png' | asset_url }} 2000w, {{ 'buddalife-logo-white-p-2600.png' | asset_url }} 2600w, {{ 'buddalife-logo-white.png' | asset_url }} 2954w" alt="" class="footer-logo"></a>
+            </div>
+            <p class="white-text footer-text">{{ section.settings.claim }}</p>
+          </div>
+          <div>
+            <h5 class="footer-heading">{{ 'tn64202ba3' | t }}</h5>
+            {%- for link in linklists["company"].links -%}<a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>{%- endfor -%}{%- render 'menu-error', menu: "company" -%}
+          </div>
+          <div>
+            <h5 class="footer-heading">{{ 'tn5a2858f' | t }}</h5>
+            {%- for link in linklists["learn-about"].links -%}<a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>{%- endfor -%}{%- render 'menu-error', menu: "learn-about" -%}
+          </div>
+          <div>
+            <h5 class="footer-heading">{{ 't224361' | t }}</h5>
+            {%- for link in linklists["help"].links -%}<a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>{%- endfor -%}{%- render 'menu-error', menu: "help" -%}
+            {%- for link in linklists["policies"].links -%}<a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>{%- endfor -%}{%- render 'menu-error', menu: "policies" -%}
+          </div>
+        </div>
+      </div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="w-layout-grid footer-grid top">
+            <h2 id="w-node-d588aed0-b6cb-c456-28e7-2253478e4787-478e4764" class="newsletter-cta">{{ section.settings.newsletter }}</h2>
+            <div class="form-block w-form">
+              {%- form "customer",  class: "" -%}<input type="hidden" name="contact[tags]" value="newsletter">
+                <div class="flex"><input type="text" class="text-field first w-input" maxlength="256" name="contact[first_name_]" data-name="First Name 2" placeholder="First Name*" id="First-Name-2" required=""><input type="text" class="text-field w-input" maxlength="256" name="contact[last_name_]" data-name="Last Name 3" placeholder="Last Name*" id="Last-Name-3" required=""></div><input type="email" class="text-field w-input" maxlength="256" name="contact[email]" data-name="Email 5" placeholder="Email Address*" id="Email-5" required=""><input type="submit" value="I WANT IN" data-wait="Please wait..." class="submit-button w-button">
+              {%- assign form_success = form.posted_successfully? -%}{%- assign form_errors = form.errors -%}{%- render "form-general-script", form_success: form_success, form_errors: form_errors -%}{%- endform -%}
+              <div class="w-form-done  {% if form_success %}form-posted-successfully{% endif %}">
+                <div>{{ 't5a0ea5a1' | t }}</div>
+              </div>
+              {%- unless form_success -%}<div class="w-form-fail  {% if form.errors %}form-has-errors{% endif %}">
+                <div>{%- render "form-errors", form_errors: form_errors -%}</div>
+              </div>{%- endunless -%}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="container">
+          <div class="copyrights-text">
+            <div>{{ section.settings.credits }}</div>
+          </div>
+        </div>
+      </div>
+    
+
+<script>var currentSection = document.currentScript.closest('.shopify-section');currentSection.setAttribute("class","section footer wf-section");</script>
+        
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "div",
+  "class": "section footer wf-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "claim",
+      "label": "Claim",
+      "default": "Buddalife is a health and wellness community for personal, animal and planet health."
+    },
+    {
+      "type": "text",
+      "id": "newsletter",
+      "label": "Newsletter",
+      "default": "Unlock your Buddalife. Join our community."
+    },
+    {
+      "type": "text",
+      "id": "credits",
+      "label": "credits",
+      "default": "Copyright Buddalife 2021 | Registered Company: 123456Y | VAT: "
+    }
+  ]
+}
+{% endschema %}
