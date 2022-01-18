@@ -4,7 +4,7 @@
         {%- assign item = link.object -%}
         <div role="listitem" class="brand-collection-item w-dyn-item">
                   <a href="{{ item.url }}" class="brand-link-block w-inline-block"><img width="13" loading="lazy" src="{{ item.image | img_url: 'master' }}" alt="{{ item.image.alt }}" class="brand-icon" srcset="{{ item.image | img_url: '1920x' }} 1920w,{{ item.image | img_url: '1600x' }} 1600w,{{ item.image | img_url: '1366x' }} 1366w,{{ item.image | img_url: '1024x' }} 1024w,{{ item.image | img_url: '768x' }} 768w,{{ item.image | img_url: '640x' }} 640w">
-                    <h5 class="brand-description">{{ item.metafields.udesly['4f0747a7'] }}</h5>
+                    <h5 class="brand-description">{{ item.metafields.udesly.category-brand-description }}</h5>
                   </a>
                 </div>
            {%- endfor -%}

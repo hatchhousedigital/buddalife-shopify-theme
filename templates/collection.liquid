@@ -1,30 +1,34 @@
 {%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "61702d2b859f5471f12d071e" -%}{%- assign bodyClasses = "" -%}
   {%- render 'navbar' -%}
-  <div class="section shop-categories wf-section">
+  <div class="section collection wf-section">
+    <div class="container side-by-side">
+      <div class="absolute-side-background large-left about"></div>
+      <div class="_30-percent-width-wrap">
+        <div class="image-wrap collection-hero">
+          <div class="image collection-hero" style="background-image: url({{ collection.metafields.global.collection-hero | img_url: 'master' }})"></div>
+        </div>
+      </div>
+      <div class="about-us">
+        {%- if collection.metafields.global.hide-title == true -%}<h1 class="heading" style="display:none">{{ collection.title }}</h1>{%- else -%}<h1 class="heading">{{ collection.title }}</h1>{%- endif -%}
+        <div class="w-richtext">{{ collection.description }}</div>
+        <a href="#shop" class="button w-button">Shop Now</a>
+      </div>      
+    </div>
+    <div class="right-square categories-shop">
+      <div class="large-square shop"></div>
+    </div>
+  </div>
+  <div class="section wf-section">
     <div class="container">
-      <div class="category-page-header w-row">
-        <div class="category-brand-image-col w-col w-col-4"><img src="{{ collection.image | img_url: 'master' }}" loading="lazy" alt="{{ collection.image.alt }}" class="category-brand-image" srcset="{{ collection.image | img_url: '1920x' }} 1920w,{{ collection.image | img_url: '1600x' }} 1600w,{{ collection.image | img_url: '1366x' }} 1366w,{{ collection.image | img_url: '1024x' }} 1024w,{{ collection.image | img_url: '768x' }} 768w,{{ collection.image | img_url: '640x' }} 640w"></div>
-        <div class="w-col w-col-8">
-          <p>{{ collection.description }}</p>
-        </div>
-      </div>
-      <div class="categories-nav">
-        <div class="sticky">
-          {%- render "category_from_menu_buddalife_categories" -%}
-        </div>
-      </div>
-      <div class="products-contain">
+      <div class="products-contain" id="shop">
         {%- if settings.collection_categories_template != blank -%}{%- render "markup_for_collection_categories_template" -%}{%- else -%}{%- render "products_where_category_idin_current" -%}{%- endif -%}
         <div class="more-resources-contain">
           <div class="more-resources-wrapper">
             <h3 class="heading-4">{{ 't48133ed2' | t }}</h3>
+            {%- render "articles_from_variable_linklistscollectionhandlelinks" -%}
           </div>
-          {%- render "articles_from_variable_linklistscollectionhandlelinks" -%}
         </div>
       </div>
-    </div>
-    <div class="right-square categories-shop">
-      <div class="large-square shop"></div>
     </div>
   </div>
   {%- section 'footer' -%}

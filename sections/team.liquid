@@ -5,10 +5,10 @@
           {%- if block.settings.image == nil -%}<div class="team-circle-img"></div>{%- else -%}<div class="team-circle-img" style="background-image: url('{{ block.settings.image.src | img_url: 'master' }}');"></div>{%- endif -%}
           <h4 class="align-center">{{ block.settings.name }}</h4>
           <div class="team-position">{{ block.settings.team_position }}</div>
-          <div class="social-links-wrapper">
+          <!--<div class="social-links-wrapper">
             <a href="{{ block.settings.linkedin }}" target="_blank" class="social-link w-inline-block"><img src="{{ 'linkedin-icon-png-transparent-background-5.png' | asset_url }}" width="18" sizes="(max-width: 767px) 18px, (max-width: 991px) 2vw, (max-width: 1279px) 18px, 1vw" srcset="{{ 'linkedin-icon-png-transparent-background-5-p-500.png' | asset_url }} 500w, {{ 'linkedin-icon-png-transparent-background-5.png' | asset_url }} 609w" alt=""></a>
             <a href="{{ block.settings.twitter }}" target="_blank" class="social-link w-inline-block"><img src="{{ 'twitter1.png' | asset_url }}" width="18" sizes="(max-width: 767px) 18px, (max-width: 991px) 2vw, (max-width: 1279px) 18px, 1vw" srcset="{{ 'twitter1-p-500.png' | asset_url }} 500w, {{ 'twitter1-p-800.png' | asset_url }} 800w, {{ 'twitter1.png' | asset_url }} 827w" alt=""></a>
-          </div>
+          </div>-->
         </div>{%- endif -%}{%- endfor -%}
       </div>
     </div>

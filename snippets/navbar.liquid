@@ -1,7 +1,32 @@
+{% if request.page_type == "blog" %}
+<script>document.documentElement.dataset.wfPage = "61702d2b859f5454242d070f";</script>
+{% endif %}
+
 <div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
       <div class="container navbar">
         <a href="{{ routes.root_url }}" aria-current="page" class="home-link w-nav-brand w--current"><img src="{{ 'buddalife-logo-white-text.png' | asset_url }}" width="220" alt="" class="navbar-logo"></a>
         <div class="navbar-right">
+          <button class="search-button-navbar" style="color: #fff;"><svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512"  xml:space="preserve">
+<style type="text/css">	.st0{fill: currentColor;}</style>
+<path class="st0" d="M501.6,480.5L380.1,359c33.8-38.7,52.4-88.4,52.3-139.8C432.5,101.5,336.8,6,219.2,6S6,101.7,6,219.2
+	s95.7,213.2,213.2,213.2c51.4,0.1,101.1-18.5,139.8-52.3l121.5,121.5c2.8,2.8,6.6,4.4,10.5,4.4c4,0,7.8-1.6,10.5-4.4
+	C507.4,495.7,507.4,486.4,501.6,480.5z M35.8,219.2c0-101.1,82.3-183.3,183.3-183.3s183.3,82.3,183.3,183.3s-82.2,183.4-183.3,183.4
+	S35.8,320.3,35.8,219.2z"/>
+</svg></button>
+          <script>
+            const searchButton = document.querySelector('.search-button-navbar');
+            searchButton.addEventListener('click', function(e) {
+                if (document.querySelector('.nav-menu').style.getPropertyValue('transform').includes('translate3d(100%')) {
+                   document.querySelector('.hamburger').click(); 
+                  
+                  requestAnimationFrame(() => {
+                         document.querySelector('input[type="search"]').focus();               
+                   });
+                }
+            });
+          </script>
+          
           <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="modal" data-wf-cart-query="" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper" udy-collection="cart">
             <a href="#" data-node-type="commerce-cart-open-link" class="w-commerce-commercecartopenlink cart-button w-inline-block"><svg class="w-commerce-commercecartopenlinkicon" width="17px" height="17px" viewBox="0 0 17 17">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -75,3 +100,17 @@
         </div>
       </div>
     </div>
+
+<script>
+            const navbar = document.querySelector('[data-node-type="commerce-cart-open-link"]');
+            window.addEventListener('scroll', () => {
+                                   
+              
+                       searchButton.style.color = navbar.style.backgroundColor;    
+                                    
+                                    if (window.scrollY < 20) {
+              searchButton.style.color = "#fff";
+            }
+            
+             });
+          </script>

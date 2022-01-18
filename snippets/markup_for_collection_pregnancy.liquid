@@ -1,24 +1,27 @@
 {% capture listItems %}
 {% for item in collections[settings.collection_pregnancy].products limit: settings.collection_pregnancy_limit %}
-<div role="listitem" class="card-container w-dyn-item">
-                    <div>
-                      <a href="#" class="link-to-block w-inline-block">
-                        <div class="product-card-content" style="background-image: url('{{item.featured_image | img_url: 'master'}}')" data-commerce-type="variation-image"></div>
-                        <div class="product-price-tag">
-                          <h5 class="product-name">{{ item.title }}</h5>
-                          <h6 data-commerce-type="variation-price" class="price-on-product">{{ item.price | money }}</h6>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
+<a href="{{ item.url | within: collection }}" role="listitem" class="card-container w-dyn-item">
+  <div class="link-to-block w-inline-block">
+    <div class="product-card-content" style="background-image: url('{{item.featured_image | img_url: 'master'}}')" data-commerce-type="variation-image"></div>
+  </div>
+  <h5 class="product-card-title">{{ item.title }}</h5>
+  {% if item.price_varies %}
+  	<h6 class="product-card-price">{{ item.price_min | money }}-{{ item.price_max | money }}</h6>
+  {% else %}
+  <div class="price-wrapper">
+  	<h6 class="product-card-price" data-commerce-type="variation-price">{{ item.price | money }}</h6>
+  	<h6 class="product-card-price sale" data-commerce-type="variation-price">{{ item.compare_at_price | money }}</h6>    
+  </div>
+  {% endif %}    
+</a>
 {%- endfor -%}
 {% endcapture %}
 {% assign items_length = listItems | strip | size %}
 <div class="w-dyn-list" udy-collection="product">
-                {%- unless items_length == 0 -%}<div role="list" class="main-cards-box w-dyn-items">
-                  {{ listItems }}
-                </div>{%- endunless -%}
-                {%- if items_length == 0 -%}<div class="w-dyn-empty">
-                  <div>No items found.</div>
-                </div>{%- endif -%}
-              </div>
+  {%- unless items_length == 0 -%}<div role="list" class="main-cards-box w-dyn-items">
+  {{ listItems }}
+  </div>{%- endunless -%}
+  {%- if items_length == 0 -%}<div class="w-dyn-empty">
+  <div>No items found.</div>
+  </div>{%- endif -%}
+</div>

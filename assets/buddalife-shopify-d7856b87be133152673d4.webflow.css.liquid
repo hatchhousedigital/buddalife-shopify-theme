@@ -2474,6 +2474,8 @@
 }
 
 @media screen and (max-width: 767px) {
+  
+
   .w-commerce-commercelayoutcontainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2658,7 +2660,25 @@
   .w-commerce-commerceaddtocartquantityinput {
     font-size: 16px;
   }
+  
+  
+  .search-3 {
+    width: 100%; 
+  }
+  
+  .search-input-2 {
+    max-width: 55%;
+    flex: 1;
+  }
+  
+  .navbar-right {
+    margin-right: -2%; 
+  }
+  
+
 }
+  
+  
 
 body {
   font-family: 'Varela Round', sans-serif;
@@ -2735,12 +2755,11 @@ p {
   font-family: 'Varela Round', sans-serif;
   color: var(--color-n1675ec70);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 22px;
   font-weight: 400;
 }
 
 a {
-  background-color: var(--color-21d1ff8);
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
   font-family: 'Varela Round', sans-serif;
@@ -2778,9 +2797,19 @@ li {
 
 .section.home-hero {
   height: auto;
+  margin-bottom: 40px;
   padding-right: 6%;
   padding-left: 6%;
-  background-color: var(--color-21d1ff8);
+  background-color: #fff;
+  background-image: linear-gradient(305deg, transparent, transparent, rgba(33, 33, 33, 0.13) 0, #fff 83%), url("https://uploads-ssl.webflow.com/61680d36445b3a3a6800954f/61b74e1f4ab2ec422cc2fb81_bluebells-in-a-forest.jpg");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+}
+  
+.section.featured-products,
+.section.home{
+  margin-bottom: 90px;
 }
 
 .section.shop-page {
@@ -2792,7 +2821,7 @@ li {
 
 .section.with-categories {
   overflow: visible;
-  padding: 120px 0% 90px;
+  padding: 240px 0% 90px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -2851,6 +2880,12 @@ li {
 
 .section.about {
   position: static;
+}
+  
+.section.collection {
+  position: static;
+  padding-top: 140px;
+  padding-bottom: 140px;
 }
 
 .section.product-section {
@@ -3449,26 +3484,16 @@ li {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 20px;
-  padding-right: 24px;
-  padding-left: 24px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
+  height: 300px;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  border-radius: 5em 3px 3px;
-  background-color: var(--color-n47e9cc03);
+  border-style: solid;
+  border-width: 2px;
+  border-color: #19494b1a;
+  border-top-right-radius: 5em;
+  background-color: var(--color-nd2a31f1);
 }
 
 .link-to-block.search {
@@ -3505,6 +3530,25 @@ li {
 .product-card-content:hover {
   opacity: 0.21;
 }
+  
+.product-card-title {
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 0px;
+}
+  
+.price-wrapper {
+  display: flex;
+}
+  
+.product-card-price {
+  font-weight: 500;
+}
+  
+.product-card-price.sale {
+  margin-left: 3px;
+  text-decoration: line-through;
+}  
 
 .products {
   width: 80%;
@@ -3845,7 +3889,7 @@ li {
 .light-green-absolute-bg {
   position: absolute;
   left: 0%;
-  top: -78px;
+  top: 40px;
   right: auto;
   bottom: auto;
   display: -webkit-box;
@@ -3893,9 +3937,13 @@ li {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border-radius: 3px 7em 3px 3px;
+  border-radius: 3px 3px 3px 3px;
   box-shadow: none;
 }
+  
+.image-wrap.collection-hero {
+  overflow: visible;
+}  
 
 .image {
   height: 450px;
@@ -3938,6 +3986,11 @@ li {
   background-image: radial-gradient(circle closest-side at 50% 50%, rgba(202, 218, 194, 0) 34%, #fff), url({{'buddalife-cbd-oil.png' | asset_url }});
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
+}
+  
+.image.collection-hero {
+    height: 400px;
+  	width: 400px;
 }
 
 .image.join {
@@ -4665,8 +4718,8 @@ li {
 .nav-menu-link {
   display: block;
   margin-bottom: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: var(--color-nd2a31f1);
   font-family: 'Varela Round', sans-serif;
   color: var(--color-n1675ec70);
@@ -5186,7 +5239,6 @@ li {
   max-height: 500px;
   margin-bottom: 44px;
   border-radius: 7em 4px 4px;
-  background-color: var(--color-n47e9cc03);
   box-shadow: -8px 8px 20px 5px rgba(0, 0, 0, 0.06);
 }
 
@@ -5538,9 +5590,11 @@ li {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  flex-direction: column;
+}
+  
+.cart-controls {
+  display: flex;
   align-items: center;
 }
 
@@ -5877,6 +5931,8 @@ li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: min-content;
+  margin-left: 5px;
 }
 
 
@@ -6021,7 +6077,6 @@ li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 20%;
   padding: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -7011,7 +7066,7 @@ li {
   border-color: rgba(25, 73, 75, 0.1);
   border-radius: 3px;
   font-family: 'Varela Round', sans-serif;
-  color: rgba(25, 73, 75, 0.1);
+  color: rgba(25, 73, 75, 0.85);
 }
 
 .search-input-2:focus {
@@ -7075,6 +7130,20 @@ li {
 }
 
 @media screen and (min-width: 1280px) {
+
+  .section.home-hero {
+    min-height: 600px;
+    padding-top: 40px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: linear-gradient(305deg, transparent, #fff 78%), url("https://uploads-ssl.webflow.com/61680d36445b3a3a6800954f/61b74e1f4ab2ec422cc2fb81_bluebells-in-a-forest.jpg");
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+  }
+  
   .search-result-list {
     grid-column-gap: 30px;
     border-radius: 10px;
@@ -7315,7 +7384,8 @@ li {
     padding-top: 60px;
   }
 
-  .image.about-hero {
+  .image.about-hero,
+  .image.collection-hero {
     height: 550px;
   }
 
@@ -8255,7 +8325,8 @@ li {
     height: 350px;
   }
 
-  .image.about-hero {
+  .image.about-hero,
+  .image.collection-hero{
     height: 350px;
   }
 
@@ -8947,6 +9018,7 @@ li {
     margin-top: 4px;
     margin-bottom: 4px;
     font-size: 20px;
+    line-height: 22px;
     text-align: center;
   }
 
@@ -8974,8 +9046,17 @@ li {
   }
 
   .section.home-hero {
-    padding-top: 90px;
-    padding-bottom: 32px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(23%, #fff), color-stop(99%, hsla(0, 0%, 100%, 0.16))), url("https://uploads-ssl.webflow.com/61680d36445b3a3a6800954f/61b74e1f4ab2ec422cc2fb81_bluebells-in-a-forest.jpg");
+    background-image: linear-gradient(180deg, #fff 23%, hsla(0, 0%, 100%, 0.16) 99%), url("https://uploads-ssl.webflow.com/61680d36445b3a3a6800954f/61b74e1f4ab2ec422cc2fb81_bluebells-in-a-forest.jpg");
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+  }
+  
+  .container .hero {
+  	text-align: center;
   }
 
   .section.shop-page {
@@ -9048,6 +9129,10 @@ li {
   .slider {
     min-height: 650px;
   }
+  
+  .section.home{
+    margin-bottom: 0px;
+  }  
 
   .home-slider-collection-item {
     -webkit-box-orient: vertical;
@@ -9184,9 +9269,14 @@ li {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
   }
+  
+  .price-wrapper {
+    display: flex;
+    justify-content: center;
+  }
 
   .link-to-block {
-    height: 300px;
+    height: 200px;
   }
 
   .link-to-block.search {
@@ -9310,6 +9400,17 @@ li {
   .image-wrap {
     border-top-right-radius: 5em;
   }
+  
+  .image-wrap.collection-hero {
+    border-top-right-radius: 0px;
+    overflow: hidden;
+  }
+
+  .section.collection {
+    position: static;
+    padding-top: 140px;
+    padding-bottom: 0px;
+}
 
   .image {
     height: 240px;
@@ -9318,6 +9419,10 @@ li {
   .image.about-hero {
     height: 250px;
   }
+  
+  .image.collection-hero {
+    width: 100%;
+  }  
 
   .image.home-hero {
     display: none;
@@ -10034,7 +10139,8 @@ li {
   }
 
   .team-card {
-    width: 80%;
+    width: 100%;
+    position: static;
     padding-right: 3px;
     padding-left: 3px;
     -webkit-box-align: center;
@@ -10359,8 +10465,8 @@ li {
   }
 
   .main-cards-box.featured {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .card-container {
@@ -10443,6 +10549,18 @@ li {
     padding-left: 40px;
     font-size: 15px;
   }
+  
+  .cart-controls {
+	flex-direction: column;
+    align-items: stretch;
+  }
+  
+  #footer-subscribe {
+	width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;    
+  }
+  
 }
 
 #w-node-d588aed0-b6cb-c456-28e7-2253478e4787-478e4764 {
@@ -10458,3 +10576,42 @@ li {
   align-self: start;
 }
 
+button.search-button-navbar {
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  button.search-button-navbar svg {
+    
+    width: 20px;
+    height: 20px;
+    
+  }
+  
+   .w-commerce-commercecartwrapper a {
+    padding-right: 0!important; 
+  }
+ 
+  @media screen and (max-width: 991px) {
+    
+     .navbar-right {
+    margin-right: -2%; 
+  } 
+    #shopify-section-team .grid {
+   	grid-template-columns: 1fr 1fr; 
+   }
+    #shopify-section-team .team-card {
+   	width: 100%;
+      position: static;
+  }
+  }
+  
+  
+  @media screen and (max-width:  570px) {
+  #shopify-section-team .grid {
+   	grid-template-columns: 1fr; 
+  }
+  }

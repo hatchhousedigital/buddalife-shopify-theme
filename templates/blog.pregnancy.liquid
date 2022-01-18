@@ -4,13 +4,13 @@
     <div class="container side-by-side">
       <div class="_30-percent-width-wrap">
         <div class="image-wrap">
-          <div class="image content-cateogry-hero"></div>
+          <div class="image content-cateogry-hero" style="background-image: url({{ blog.metafields.global.hero-img | img_url: 'master' }});"></div>
         </div>
       </div>
       <div class="about-us">
         <h1 class="heading">{{ 't2c7d0f0d' | t }}</h1>
         <p class="paragraph">{{ blog.metafields.pregnancy.description.value }}</p>
-        <a href="#" class="button w-button">{{ 't2db00960' | t }}</a>
+          <!--<a href="#" class="button w-button">{{ 't2db00960' | t }}</a>-->
       </div>
     </div>
     <div class="absolute-side-background large-left about"></div>
@@ -33,15 +33,15 @@
         </div>
         <div class="flex verticle">
           <div class="catergories-contain category-page">
-            <h2 class="content-category-heading">{{ 'tn5e5d4265' | t }}</h2>
-            {%- render "pregnancies_archive" -%}
-          </div>
-          <div class="catergories-contain category-page">
             <h2 class="content-category-heading">{{ 'tn5ae07526' | t }}</h2>
             <div class="products content-category-page">
               {%- if settings.collection_pregnancy != blank -%}{%- render "markup_for_collection_pregnancy" -%}{%- else -%}{%- render "products_max_6_number_11" -%}{%- endif -%}
             </div>
           </div>
+          <div class="catergories-contain category-page">
+            <h2 class="content-category-heading">{{ 'tn5e5d4265' | t }}</h2>
+            {%- render "pregnancies_archive" -%}
+          </div>          
         </div>
       </div>
     </div>
