@@ -17,6 +17,7 @@
   {% endif %}     
 </a>
 {%- endfor -%}
+{% endpaginate %}
 {% endcapture %}
 {% assign items_length = listItems | strip | size %}
 <div class="w-dyn-list" udy-collection="product">

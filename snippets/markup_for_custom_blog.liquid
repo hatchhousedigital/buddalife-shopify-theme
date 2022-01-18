@@ -13,8 +13,9 @@
                       </a>
                     </div>
                   </div>
-{%- endfor -%}
-{% endcapture %}
+                  {%- endfor -%}
+                  {% endpaginate %}
+                  {% endcapture %}
 {% assign items_length = listItems | strip | size %}
 <div class="w-dyn-list" udy-collection="product">
                 {%- unless items_length == 0 -%}<div role="list" class="main-cards-box w-dyn-items">
