@@ -1,0 +1,26 @@
+<div class="pagination-wrapper">
+    {% if paginate.previous.is_link %}
+    <a href="{{ paginate.previous.url }}" class="button w-button">
+        < Previous</a>
+            {% endif %}
+            {% if paginate.next.is_link %}
+            <a href="{{ paginate.next.url }}" class="button w-button">Next ></a>
+            {% endif %}
+</div>
+
+<style>
+    .pagination-wrapper {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pagination-wrapper a {
+        margin: 0 10px;
+        margin-top: 0px;
+        width: 186px;
+        text-align: center;
+    }
+</style>

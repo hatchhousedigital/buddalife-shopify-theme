@@ -1,5 +1,7 @@
 {% capture listItems %}
-{% for item in collections[settings.collection_happiness].products limit: settings.collection_happiness_limit %}
+{% paginate collections[settings.collection_happiness_limit].products by settings.collection_happiness_limit %}
+{% assign pagination = paginate %}
+{% for item in collections[settings.collection_happiness].products %}
 <a href="{{ item.url | within: collection }}" role="listitem" class="card-container w-dyn-item">           
   <div class="link-to-block w-inline-block">
     <div class="product-card-content" style="background-image: url('{{item.featured_image | img_url: 'master'}}')" data-commerce-type="variation-image"></div>
@@ -21,7 +23,8 @@
 <div class="w-dyn-list" udy-collection="product">
   {%- unless items_length == 0 -%}<div role="list" class="main-cards-box w-dyn-items">
   {{ listItems }}
-  </div>{%- endunless -%}
+  </div>
+  {% render "blog-pagination", paginate: pagination %}{%- endunless -%}
   {%- if items_length == 0 -%}<div class="w-dyn-empty">
   <div>No items found.</div>
   </div>{%- endif -%}
