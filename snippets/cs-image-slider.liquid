@@ -1,8 +1,23 @@
+{% assign number_of_images_per_slide = 4 %}
 <style>
-    #product-images .w-slider-mask {
+    #product-images .main-slider .w-slider-mask,
+    #product-images .thumbnails-slider img {
         box-shadow: 14px 17px 8px 2px rgb(0 0 0 / 4%);
         border-radius: 3px;
         height: auto;
+        border: 1px solid transparent;
+    }
+
+    #product-images {
+        margin: 0 20px;
+    }
+
+    #product-images .thumbnails-slider img {
+        cursor: pointer;
+    }
+
+    #product-images .thumbnails-slider img.active {
+        border: 1px solid rgb(0 0 0 / 18%);
     }
 
     #product-images .w-slider {
@@ -10,9 +25,22 @@
         height: auto;
     }
 
+    #product-images .w-slider-arrow-left,
+    #product-images .w-slider-arrow-right {
+        filter: contrast(0.6);
+    }
+
+    #product-images .w-slider-arrow-left div,
+    #product-images .w-slider-arrow-right div {
+        font-size: 25px;
+    }
+
     #product-images .w-slider-arrow-left {
-        top: 80px;
-        bottom: 80px;
+        left: -60px;
+    }
+
+    #product-images .w-slider-arrow-right {
+        right: -60px;
     }
 
     #product-images img {
@@ -25,18 +53,32 @@
         position: absolute;
         top: 8px;
         left: 8px;
+        width: 40px;
+    }
+
+    #product-images .thumbnails-slider {
+        margin-top: 20px;
+    }
+
+    #product-images .thumbnails-wrapper {
+        display: grid;
+        grid-template-columns: repeat( {{number_of_images_per_slide}}, 1fr);
+        grid-gap: 18px;
+        padding: 1px;
     }
 </style>
 
 <div id="product-images">
-    <div data-delay="4000" data-animation="slide" class="w-slider" data-autoplay="false" data-easing="ease"
+    <div data-delay="4000" data-animation="slide" class="w-slider main-slider" data-autoplay="false" data-easing="ease"
         data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3"
         data-duration="500" data-infinite="true" role="region" aria-label="carousel">
         <div class="w-slider-mask" id="w-slider-mask-0">
             {% for image in product.images %}
-            
+
             <div class="w-slide" aria-label="1 of 2" role="group">
-                <a href="#" class="w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog"><img src="{{ 'zoom_in_black_24dp.svg' | asset_url }}" loading="lazy" width="93" alt=""><script type="application/json" class="w-json">{
+                <a href="#" class="w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog"><img
+                        src="{{ 'zoom_in_black_24dp.svg' | asset_url }}" loading="lazy" width="93" alt="">
+                    <script type="application/json" class="w-json">{
                     "items": [
                       {
                         "url": "{{image | img_url: 'master' }}",
@@ -44,7 +86,8 @@
                       }
                     ],
                     "group": "Product {{ product.id }}"
-                  }</script></a>
+                  }</script>
+                </a>
                 <img src="{{image | img_url: 'master' }}" loading="lazy" />
 
             </div>
@@ -62,10 +105,103 @@
             <div class="w-icon-slider-right"></div>
         </div>
         <div class="w-slider-nav w-round" style="display: none;">
-            <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 2" aria-pressed="true"
-                role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;"></div>
-            <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 2 of 2" aria-pressed="false"
-                role="button" tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
+            <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 1 of 2" aria-pressed="true" role="button"
+                tabindex="0" style="margin-left: 3px; margin-right: 3px;"></div>
         </div>
     </div>
+    <div data-delay="4000" data-animation="slide" class="w-slider thumbnails-slider" data-autoplay="false"
+        data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+        data-nav-spacing="3" data-duration="500" data-infinite="true" role="region" aria-label="carousel">
+        <div class="w-slider-mask" id="w-slider-mask-0">
+            {% for image in product.images %}
+            {% assign current_index = forloop.index0 | modulo: number_of_images_per_slide %}
+            {% if current_index == 0 %}
+            {% unless forloop.first %}
+        </div>
+    </div>
+    {% endunless %}
+    {% endif %}
+    {% if current_index == 0 %}
+    <div class="w-slide" aria-label="1 of 2" role="group">
+        <div class="thumbnails-wrapper">
+            {% endif %}
+            <img src="{{image | img_url: 'large' }}" loading="lazy" class="thumbnail-image"
+                data-thumbnail-index="{{forloop.index0}}" />
+
+            {% if forloop.last %}
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div aria-live="off" aria-atomic="true" class="w-slider-aria-label" data-wf-ignore=""></div>
 </div>
+<div class="w-slider-arrow-left" role="button" tabindex="0" aria-controls="w-slider-mask-0" aria-label="previous slide">
+    <div class="w-icon-slider-left"></div>
+</div>
+<div class="w-slider-arrow-right" role="button" tabindex="0" aria-controls="w-slider-mask-0" aria-label="next slide">
+    <div class="w-icon-slider-right"></div>
+</div>
+<div class="w-slider-nav w-round" style="display: none;">
+    <div class="w-slider-dot w-active" data-wf-ignore="" aria-label="Show slide 1 of 2" aria-pressed="true"
+        role="button" tabindex="0" style="margin-left: 3px; margin-right: 3px;"></div>
+    <div class="w-slider-dot" data-wf-ignore="" aria-label="Show slide 2 of 2" aria-pressed="false" role="button"
+        tabindex="-1" style="margin-left: 3px; margin-right: 3px;"></div>
+</div>
+</div>
+</div>
+
+<script>
+    window.Webflow = window.Webflow || [];
+    window.Webflow.push(function () {
+        const slider = document.querySelector('#product-images .main-slider');
+        const thumbsSlider = document.querySelector('#product-images .thumbnails-slider');
+        thumbsSlider.querySelectorAll('.w-slide img').forEach(function (el, i) {
+            el.addEventListener('click', function () {
+                slider.querySelectorAll('.w-slider-dot')[i].click();
+            })
+        })
+        thumbsSlider.querySelectorAll('.w-slider-arrow-left').forEach(function (el) {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                requestAnimationFrame(function() {
+                    slider.querySelector('.w-slider-arrow-left').click();
+                })
+                
+            })
+        });
+
+        thumbsSlider.querySelectorAll('.w-slider-arrow-right').forEach(function (el) {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                requestAnimationFrame(function() {
+                    slider.querySelector('.w-slider-arrow-right').click();
+                })
+                
+            })
+        });
+        function checkSlider() {
+            const data = jQuery.data(slider, '.wSlider');
+
+            const index = Math.floor(data.index / {{ number_of_images_per_slide }});
+
+    thumbsSlider.querySelectorAll('.w-slider-dot')[index].click();
+    thumbsSlider.querySelectorAll('.w-slide img').forEach(function (el, i) {
+        el.classList.toggle('active', i === data.index)
+    })
+        }
+
+    const observer = new MutationObserver(Webflow._.throttle(checkSlider));
+
+    observer.observe(slider.querySelector('.w-slider-mask'), {
+        childList: true,
+        subtree: true,
+        attributes: true
+    })
+
+    })
+</script>
