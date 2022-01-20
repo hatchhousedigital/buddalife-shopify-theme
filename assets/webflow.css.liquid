@@ -1880,7 +1880,51 @@ body p {
 
 /** Fix point 10 **/
 @media screen and (max-width: 479px) {
-  .faqs .faq {
+  .faqs .faq, .faqs .faq-answer * {
     text-align: left;
   }
 }
+
+
+/** Fix point 5 **/
+@media screen and (max-width: 479px) {
+  .template-blog .products .main-cards-box.w-dyn-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: auto;
+    grid-gap: 16px 0;
+  }
+
+  .template-blog .products .main-cards-box.w-dyn-items a {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #how-can-we-help-you {
+    padding-top: 10px;
+  } 
+
+  #how-can-we-help-you h2, #how-can-we-help-you p {
+    margin-bottom: 24px;
+  }
+
+  #how-can-we-help-you .content-categories-card {
+   margin-top: 0px;
+  }
+}
+/** Fix point 10 **/
+@media screen and (max-width: 479px) {
+  #how-can-we-help-you {
+    padding-top: 0;
+  } 
+
+  #how-can-we-help-you h2, #how-can-we-help-you p {
+    margin-bottom: 24px;
+  }
+
+  #how-can-we-help-you .content-categories-card {
+    width: 140px;
+  }
+}
+

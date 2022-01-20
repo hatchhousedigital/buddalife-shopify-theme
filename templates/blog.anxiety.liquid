@@ -35,7 +35,7 @@
           <div class="flex verticle">
             <div class="catergories-contain category-page">
               <h2 class="content-category-heading">{{ 't73af73f9' | t }}</h2>
-              <div class="products content-category-page">
+              <div class="products content-category-page" id="products">
                 {%- if settings.collection_anxiety != blank -%}{%- render "markup_for_collection_anxiety" -%}{%- else -%}{%- render "products_max_6" -%}{%- endif -%}
               </div>
             </div>
