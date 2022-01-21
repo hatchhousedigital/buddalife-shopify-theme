@@ -42,19 +42,22 @@ bodyClasses = "" -%}
 
   .section.collection.new-banner {
     height: 80vh;
-    background: linear-gradient(305deg, transparent, #fff 88%), url({{collection.metafields.my_fields.background_image | img_url: 'master'}}) center center no-repeat;
+    background: linear-gradient(305deg, transparent, #fff 88%),
+    url({{collection.metafields.my_fields.background_image | img_url: 'master'}}) center center no-repeat;
     background-size: cover;
   }
 
+ 
+
   .template-collection .new-banner .collection-hero-background {
-      background-color: rgba(16, 142, 123, 1);
-      padding: 20px;
-      width: 230px;
-      display: flex;
-      height: 230px;
-      justify-content: center;
-      border-radius: 40px;
-    }
+    background-color: rgba(16, 142, 123, 1);
+    padding: 20px;
+    width: 230px;
+    display: flex;
+    height: 230px;
+    justify-content: center;
+    border-radius: 40px;
+  }
 
 
   @media screen and (max-width: 991px) {
@@ -68,18 +71,34 @@ bodyClasses = "" -%}
   @media screen and (max-width: 479px) {
     .section.collection.new-banner {
       position: static;
-      margin-top: 80px;
-      height: calc(100vh - 80px);
+      height: 100vh;
       padding: 0 20px;
     }
 
+    .section.collection.wf-section.new-banner.buddapet {
+       background-position: 36% 0px;
+    }
+
+    .section.collection.wf-section.new-banner.buddababy {
+      background-position: 66%;
+    }
+
     .template-collection .new-banner .w-richtext {
-      font-size: 80%;
+      font-size: 75%;
       text-align: center;
+    }
+
+    .template-collection .new-banner .collection-hero-background {
+      width: 180px;
+      height: 180px;
+    }
+
+    .template-collection .new-banner .image.collection-hero {
+      width: 160px;
     }
   }
 </style>
-<div class="section collection wf-section new-banner">
+<div class="section collection wf-section new-banner {{collection.handle}}">
   <div class="container side-by-side">
     <div class="absolute-side-background large-left about"></div>
     <div class="_30-percent-width-wrap">

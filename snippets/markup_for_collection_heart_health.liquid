@@ -1,5 +1,5 @@
 {% capture listItems %}
-{% paginate collections[settings.collection_heart_health_limit].products by settings.collection_heart_health_limit %}
+{% paginate collections[settings.collection_heart_health].products by settings.collection_heart_health_limit %}
 {% assign pagination = paginate %}
 {% for item in collections[settings.collection_heart_health].products %}
 <a href="{{ item.url | within: collection }}" role="listitem" class="card-container w-dyn-item">
